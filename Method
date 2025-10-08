@@ -1,0 +1,20 @@
+#include <iostream>
+#include<stdio.h>
+using namespace std;
+void Bravo(int &a);
+ 
+ 
+int main()
+{
+	int a = 2;
+	cout << "before:" << a << endl;
+	Bravo(a);
+	cout << "after:" << a << endl;
+	return 0;
+}
+void Bravo( int &a) {
+	cout << "before bravo = "<< a <<endl;
+	a++;
+	cout << "after bravo = " << a << endl;
+}
+ 
