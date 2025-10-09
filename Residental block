@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+ 
+int main()
+{
+	setlocale(LC_ALL, "Bulgarian");
+	cout << "Въведете номер на блока"<<":";
+	int blockNumber;
+	int floorsCount;
+	int apartamentsCount;
+	cin >> blockNumber;
+	cout << "Въведете броя на етажите" << ":";
+	cin >> floorsCount;
+	cout << "Въведи броя на апартаментите" << ":";
+	cin >> apartamentsCount;
+	//creating matrix with floorCount and apartments count and the size of dimensions 100;
+	string familyList[100][100];
+	for (int i = 0; i < floorsCount; i++) {
+		for (int j = 0; j < apartamentsCount; j++) {
+			cout << "етаж N№" << i + 1 << "; " << "апартамент N№ " << j + 1 << "; ";
+			cin >> familyList[i][j];
+		}
+	}
+	//Printing the matrix.
+	cout << "Блок N№" << blockNumber << endl;
+	for (int i = 0; i < floorsCount; i++) {
+		for (int j = 0; j < apartamentsCount; j++) {
+			cout << i + 1 <<j+1<< ":" << familyList[i][j] << "\t";
+		}
+		cout << endl;
+	}
+	return 0;
+}
